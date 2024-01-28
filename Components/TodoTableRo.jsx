@@ -13,9 +13,11 @@ const TodoTableRo = ({ todo, Complated, id, deleteTodo }) => {
             <td className={`px-6 py-4 ${Statuss ? "line-through" : ""}`}>
                 {title}
             </td>
-            <td className={`px-6 py-4 ${Statuss ? "line-through" : ""}`}>
+            {Statuss ? <td className="px-6 py-4 line-through">
                 {description}
-            </td>
+            </td> : <td className="px-6 py-4">
+                {description}
+            </td>}
             <td className="px-6 py-4">
                 {Statuss ? "Complated" : "Pending"}
             </td>
