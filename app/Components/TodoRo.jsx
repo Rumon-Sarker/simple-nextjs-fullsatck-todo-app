@@ -13,7 +13,7 @@ const TodoRo = ({ todo, Complated, id, deleteTodo }) => {
             <td className={`px-6 py-4 ${Statuss ? "line-through" : ""}`}>
                 {title}
             </td>
-            {Statuss ? <td className="px-6 py-4 text-green-500 line-through">
+            {Statuss ? <td className="px-6 py-4 text-green-800 line-through">
                 {description}
             </td> : <td className="px-6 py-4">
                 {description}
