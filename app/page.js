@@ -1,10 +1,11 @@
 "use client"
-import TodoTableRo from "@/Components/TodoTableRo";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import TodoRo from "./Components/TodoRo";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -127,7 +128,7 @@ export default function Home() {
             </thead>
             <tbody>
               {tododata?.map((todo, index) => {
-                return <TodoTableRo key={index} id={index} todo={todo} Complated={Complated} deleteTodo={deleteTodo} />
+                return <TodoRo key={index} id={index} todo={todo} Complated={Complated} deleteTodo={deleteTodo} />
               })}
 
             </tbody>

@@ -1,12 +1,11 @@
-"use client"
 import React from 'react';
 import { MdDelete } from 'react-icons/md';
 import { FaCheck } from "react-icons/fa6";
 
-const TodoTableRo = ({ todo, Complated, id, deleteTodo }) => {
+const TodoRo = ({ todo, Complated, id, deleteTodo }) => {
     const { description, _id, title, Statuss } = todo;
-
     return (
+
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {id + 1}
@@ -27,9 +26,8 @@ const TodoTableRo = ({ todo, Complated, id, deleteTodo }) => {
             </td>
             <td><button onClick={() => deleteTodo(_id)} className='bg-red-700 text-white p-2 text-xl ml-5 rounded'><MdDelete /></button></td>
         </tr>
+
     );
 };
 
-export default TodoTableRo;
-
-
+export default TodoRo;
