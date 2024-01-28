@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { MdDelete } from 'react-icons/md';
 import { FaCheck } from "react-icons/fa6";
@@ -13,7 +14,7 @@ const TodoTableRo = ({ todo, Complated, id, deleteTodo }) => {
             <td className={`px-6 py-4 ${Statuss ? "line-through" : ""}`}>
                 {title}
             </td>
-            {Statuss ? <td className="px-6 py-4 line-through">
+            {Statuss ? <td className="px-6 py-4 text-green-500 line-through">
                 {description}
             </td> : <td className="px-6 py-4">
                 {description}
