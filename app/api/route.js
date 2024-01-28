@@ -34,7 +34,7 @@ export async function PUT(request) {
     const id = await request.nextUrl.searchParams.get('_id')
     await TodoModal.findByIdAndUpdate(id, {
         $set: {
-            Status: true
+            Statuss: true
         }
     });
     return NextResponse.json({ msg: "Complated" })
