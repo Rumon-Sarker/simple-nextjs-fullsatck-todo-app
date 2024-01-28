@@ -13,7 +13,6 @@ export default function Home() {
   })
   const [tododata, setTododata] = useState([]);
 
-  console.log("todata:", tododata)
 
   // const handaleFormSubmit = (event) => {
   //   event.preventDefault();
