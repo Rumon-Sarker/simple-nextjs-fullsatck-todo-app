@@ -13,14 +13,14 @@ const TodoTableRo = ({ todo, Complated, id, deleteTodo }) => {
             <td className={`px-6 py-4 ${Status ? "line-through" : ""}`}>
                 {title}
             </td>
-            <td className={`px-6 py-4 ${Status ? "line-through" : ""}`}>
+            <td className={`px-6 py-4 ${Status ? "line-through" : "text-green-400"}`}>
                 {description}
             </td>
             <td className="px-6 py-4">
                 {Status ? "Complated" : "Pending"}
             </td>
             <td className="px-6 py-4">
-                {Status ? "" : <button onClick={() => Complated(_id)} className={`bg-green-800 text-white font-bold text-sm ${Status ? "disabled" : ""} p-2 rounded`}><FaCheck /></button>}
+                {Status ? "" : <button onClick={() => Complated(_id)} className={`bg-green-800 text-white font-bold text-sm p-2 rounded`}><FaCheck /></button>}
             </td>
             <td><button onClick={() => deleteTodo(_id)} className='bg-red-700 text-white p-2 text-xl ml-5 rounded'><MdDelete /></button></td>
         </tr>
